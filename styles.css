@@ -1,32 +1,66 @@
+/* Global Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-  height: 100%;
-  font-family: 'Arial', sans-serif;
-  scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
-  overflow-y: scroll;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    position: relative;
 }
 
-.hero {
-  height: 100vh;
-  background-image: url('assets/bg1.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+/* Navigation */
+nav {
+    background-color: #808080;
+    padding: 1rem;
+    width: 100%;
 }
 
-.about {
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  padding: 60px;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+// ... existing code ...
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .deforestation .content,
+    .graph-section .content {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .deforestation,
+    .graph-section,
+    .cta,
+    .quote {
+        padding: 4rem 1rem;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+    }
 }
